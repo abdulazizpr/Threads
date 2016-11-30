@@ -36,4 +36,16 @@
         android:layout_marginTop="26dp"
         android:id="@+id/button"
         android:onClick="klikMulai" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:id="@+id/button2"
+        android:onClick="klikMulai2" />
 </RelativeLayout>

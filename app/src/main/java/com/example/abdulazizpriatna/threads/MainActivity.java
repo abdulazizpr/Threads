@@ -1,5 +1,6 @@
 package com.example.abdulazizpriatna.threads;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
         //button ditekan
         pb.setMax(100);
         new KerjakanBackgroundTask().execute(); //tidak ada parameter
+    }
+
+    public void klikMulai2(View v) {
+        Intent serviceIntent;
+        serviceIntent = new Intent(getApplicationContext(), CobaService.class);
+        serviceIntent.putExtra("PESAN", "hello world"); //data yang dikirim
+        getApplicationContext().startService(serviceIntent); //mulai jalankan
     }
 
     private class KerjakanBackgroundTask extends AsyncTask<Void, Integer, String> {
